@@ -12,3 +12,4 @@ DL Miller, R Glennie, A E Seaton (2020). Understanding the Stochastic Partial Di
 - Wood, S. N. (2019). Simplified integrated nested Laplace approximation. Biometrika. https://doi.org/10.1093/biomet/asz044
 - Wood, S. N. (2017). Generalized Additive Models. An Introduction with R (2nd ed.). CRC Press.
 
+![Scooby Doo and the gang unmasking the SPDE method to reveal that is, in fact, a basis-penalty smoother](https://raw.githubusercontent.com/dill/SPDE-talk-IBS/main/figures/scooby.png)
