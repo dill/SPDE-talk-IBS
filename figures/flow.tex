@@ -1,0 +1,37 @@
+\begin{figure}
+\resizebox{\textwidth}{!}{
+\begin{tikzpicture}[-latex, auto, node distance=3cm and 2cm, semithick,
+                    state/.style ={circle, minimum width =0.5 cm}, every text node part/.style={align=center}]
+
+% SPDE nodes
+\node[state] (corr) {Correlation};
+\node[state] (spde) [right=.5cm of corr] {SPDE};
+\node[state] (weak) [right =3cm of spde, text width=1.5cm] {Weak solution};
+\node[state] (fem) [right =3cm of weak, text width=3cm] {Finite element approximation (design matrix)};
+\node[state] (prec) [right =1cm of fem] {Precision};
+\node[state] (model) [below =of prec] {Fitting};
+
+% GAM nodes
+\node[state] (smoothness) [below= of corr] {Smoothness};
+\node[state] (pen) [below=of spde] {Penalty};
+\node[state] (pdesol) [right=1.5cm of pen, text width=1.5cm] {Design matrix};
+\node[state] (penalty) [right=of pdesol] {Precision};
+
+% spde edges
+\path (spde) edge [right] node[above] {$\langle \;,\; \rangle$ \\ test functions} (weak);
+\path (weak) edge [right] node[above] {Pick a finite \\ dimensional basis} (fem);
+\path (fem) edge [right] node[above] {$\langle \;,\; \rangle$} (prec);
+\path (prec) edge [bend right] node[above] {} (model);
+\path (fem) edge [bend right] node[above] {} (model);
+
+% GAM
+\path (pen) edge [right] node[above] {Basis} (pdesol);
+\path (pdesol) edge [right] node[above] {Penalty \\ evaluation} (penalty);
+\path (penalty) edge [bend right] node[above] {} (model);
+\path (pdesol) edge [bend right] node[above] {} (model);
+
+\end{tikzpicture}
+}
+
+\label{fig:flow}
+\end{figure}
