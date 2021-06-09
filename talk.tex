@@ -396,6 +396,21 @@ Setup using \texttt{R-INLA}, fit with \texttt{mgcv}
 %  \end{figure}
 %\end{frame}
 
+\section{Take-home}
+
+\begin{frame}{A modelling framework emerges}
+
+Use basis-penalty or basis-precision as a common currency.
+
+\begin{enumerate}
+ \item \textbf{Choose a covariance model}: explicitly (as in kriging, etc), via smoothness penalty (e.g., splines), or with an SPDE;
+ \item \textbf{Approximate the precision matrix \(Q\)}: reduce dimension or induce sparsity in \(Q\);
+ \item \textbf{Draw approximate inference using a software implementation}: e.g., with \texttt{mgcv}, MCMC (e.g., Stan; \texttt{JAGS}), \texttt{R-INLA}, \texttt{lme4}  or \texttt{TMB}.
+\end{enumerate}
+
+\end{frame}
+
+
 
 \section{More info?}
 
@@ -405,6 +420,10 @@ Setup using \texttt{R-INLA}, fit with \texttt{mgcv}
       \includegraphics[width=0.9\textwidth]{figures/paper.png}
     \end{center}
   \end{figure}
+  \begin{center}
+  Slides: \url{https://github.com/dill/SPDE-talk-IBS}
+  \end{center}
+  
 \end{frame}
 
 %\begin{frame}{Bonus Scooby}
