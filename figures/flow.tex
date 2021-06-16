@@ -15,7 +15,7 @@
 \node[state] (smoothness) [below= of corr] {Smoothness};
 \node[state] (pen) [below=of spde] {Penalty};
 \node[state] (pdesol) [right=1.5cm of pen, text width=1.5cm] {Design matrix};
-\node[state] (penalty) [right=of pdesol] {Precision};
+\node[state] (penalty) [right=of pdesol] {Penalty matrix};
 
 % spde edges
 \path (spde) edge [right] node[above] {$\langle \;,\; \rangle$ \\ test functions} (weak);

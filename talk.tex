@@ -58,9 +58,15 @@ Two ways to think about this: Smoothness and Correlation.
 
 Two popular approaches to modelling it: GAMs and SPDEs. 
 
+\begin{itemize}
+\item GAMs $\approx$ ``smoothing using spline-type things''
+\item SPDEs $\approx$ ``Mat\'ern covariance approximation using SPDEs/MRFs'' 
+\end{itemize}
+
   \begin{figure}[h]
     \begin{center}
-      \includegraphics[height=0.7\textheight]{figures/smooth_corr.pdf}
+      \includegraphics[height=0.3\textheight]{figures/mgcv-inside.png}
+            \includegraphics[height=0.3\textheight]{figures/inla.png}
     \end{center}
   \end{figure}
 
@@ -146,20 +152,20 @@ Apply: how can we use these results in practice?
 
 
 
-
-\begin{frame}{Smoothing matrix $\bm{S}$}
-  \begin{figure}[h]
-    \begin{center}
-      \includegraphics[width=0.7\textwidth, trim={0 9cm 0 0}, clip]{figures/smooth_corr.pdf}
-    \end{center}
-  \end{figure}
-    \begin{figure}[h]
-    \begin{center}
-      \includegraphics[height=0.4\textheight, trim={9cm 0 0 9cm}, clip]{figures/smooth_corr.pdf}
-    \end{center}
-  \end{figure}
-\end{frame}
-
+%
+%\begin{frame}{Smoothing matrix $\bm{S}$}
+%\begin{figure}[h]
+%  \begin{center}
+%    \includegraphics[width=0.7\textwidth, trim={0 9cm 0 0}, clip]{figures/smooth_corr.pdf}
+%  \end{center}
+%\end{figure}
+%  \begin{figure}[h]
+%  \begin{center}
+%    \includegraphics[height=0.4\textheight, trim={9cm 0 0 9cm}, clip]{figures/smooth_corr.pdf}
+%  \end{center}
+%\end{figure}
+%\end{frame}
+%
 % Richard's section
 \section{SPDE approach}
 
